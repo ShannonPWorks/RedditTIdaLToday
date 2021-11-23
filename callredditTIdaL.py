@@ -70,7 +70,7 @@ for submission in tidal_today_subreddit:
             comments_dict["comment_parent_id"].append(comment.parent_id) #key field to join these tables for query
             comments_dict["comment_created_utc"].append(comment.created_utc)
 
-#this populates the dataframes and generates the csv files            
+#this populates the data frames and generates the csv files            
 submission_data = pd.DataFrame(submission_dict)
 comments_data = pd.DataFrame(comments_dict)
 submission_data.to_csv('topicstoday.csv', index=False) 
